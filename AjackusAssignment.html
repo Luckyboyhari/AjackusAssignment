@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Employee Directory</h1>
+        <input type="text" id="searchInput" placeholder="Search by name or email">
+        <button onclick="openForm()">Add Employee</button>
+    </header>
+
+    <div id="filters">
+        <!-- Optional filters can be added here -->
+    </div>
+
+    <div id="employeeList"></div>
+
+    <!-- Modal Form -->
+    <div id="employeeModal" class="modal">
+        <div class="modal-content">
+            <h2 id="formTitle">Add Employee</h2>
+            <form id="employeeForm">
+                <input type="hidden" id="empId">
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="department" placeholder="Department" required>
+                <input type="text" id="role" placeholder="Role" required>
+                <button type="submit">Save</button>
+                <button type="button" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
